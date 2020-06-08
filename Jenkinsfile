@@ -7,12 +7,18 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
-      stage('stage 2') {
+      
+      stage('build') {
          steps {
             echo "$JOB_NAME"
          }
       }      
-       
+      
+      stage('Sonar analyze') {
+         steps {
+            echo "$JOB_NAME"
+         }
+      }         
       
    }
 }
