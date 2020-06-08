@@ -7,6 +7,11 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
+      stage('stage 2') {
+         steps {
+            echo "$JOB_NAME"
+         }
+      }      
        
       
    }
